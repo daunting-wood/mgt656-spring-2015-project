@@ -67,6 +67,7 @@ function checkIntrange(request, fieldName, minVal, maxVal, contextData){
  * Validates the form and adds the new event to
  * our global list of events.
  */
+
 function saveEvent(request, response){
   var contextData = {errors: []};
 
@@ -90,18 +91,18 @@ function saveEvent(request, response){
     var day = checkIntrange(request, 'day', 1, 31, contextData);
     var hour = checkIntrange(request, 'hour', 0, 23, contextData);
     var year = checkIntrange(request, 'year', 2015, 2016, contextData);
-    console.log(request.body.year)
 
   if (contextData.errors.length === 0) {
     var newEvent = {
-      title: request.body.title,
+      id: events.getMaxId() + 1,
+      itle: request.body.title,
       location: request.body.location,
       image: request.body.image,
       date: new Date(),
       attending: []
     };
     events.all.push(newEvent);
-    response.redirect('/events');
+    response.redirect('/events/' + newEvent.id);
   }else{
     response.render('create-event.html', contextData);
   }
