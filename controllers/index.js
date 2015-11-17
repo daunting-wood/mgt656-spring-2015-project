@@ -10,7 +10,8 @@ function index (request, response) {
   var contextData = {
     'title': 'MGT 656',
     'tagline': 'You are doomed (just kidding).',
-    'events' : []
+    'events' : [],
+    'showRSVP' : false
   
   };
   for(var i=0; i < events.all.length; i++){
@@ -19,6 +20,11 @@ function index (request, response) {
       contextData.events.push(event);
   }
   }
+  
+  if(Math.random() > 0.5){
+    contextData.showRSVP = true;
+  }
+  
   response.render('index.html', contextData);
 }
 
