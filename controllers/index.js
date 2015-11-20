@@ -11,7 +11,7 @@ function index (request, response) {
     'title': 'MGT 656',
     'tagline': 'You are doomed (just kidding).',
     'events' : [],
-    'showRSVP' : false
+    //'showRSVP' : false
   
   };
   for(var i=0; i < events.all.length; i++){
@@ -21,9 +21,9 @@ function index (request, response) {
   }
   }
   
-  if(Math.random() > 0.5){
-    contextData.showRSVP = true;
-  }
+  //if(Math.random() > 0.5){
+  //  contextData.showRSVP = true;
+  //}
   
   response.render('index.html', contextData);
 }
