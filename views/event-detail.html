@@ -44,7 +44,7 @@ var pageVariations = [
 // Wait for the DOM to load, then execute the view for the chosen variation.
 $(document).ready(function(){
   // Ask Google Analytics which variation to show the user.
-  var chosenVariation = cxApi.chooseVariation(bvHBUCnrTyCg12aSlpZxDg);
+  var chosenVariation = cxApi.chooseVariation('bvHBUCnrTyCg12aSlpZxDg');
 
   // Execute the chosen view
   pageVariations[chosenVariation]();
