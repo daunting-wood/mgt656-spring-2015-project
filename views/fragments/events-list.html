@@ -17,18 +17,21 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 
 <script>
+// Define JavaScript for each page variation of this experiment.
+var pageVariations = [
+  function() {},  // Original: Do nothing. This will render the default HTML.
+  function() {    // Variation 1: add RSVP text
+    $( 'li.event' ).prepend( 'RSVP ' );
+  }
+];
+
+// Wait for the DOM to load, then execute the view for the chosen variation.
+$(document).ready(function(){
   // Ask Google Analytics which variation to show the user.
-  var chosenVariation = cxApi.chooseVariation();
-  // Define JavaScript for each page variation of this experiment.
-  var pageVariations = [
-    function() {},  // Original: Do nothing. This will render the default HTML.
-    function() {    // Variation 1: add RSVP text
-      $('li.event').prepend('RSVP ');
-    }
-  ];
-  // Wait for the DOM to load, then execute the view for the chosen variation.
-  $(document).ready(function(){
-    // Execute the chosen view
-    pageVariations[chosenVariation]();
-  });
+  var chosenVariation = cxApi.chooseVariation('8gbv_Rn3QnqqUgXnsi6-PQ');
+
+  // Execute the chosen view
+  pageVariations[chosenVariation]();
+}
+);
 </script>
