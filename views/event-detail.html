@@ -27,28 +27,25 @@
   </form>  
   <a href='/events' id='donation' class='donation'>Donate</a>
   <!-- Load the Content Experiment JavaScript API client for the experiment -->
-<script src="//www.google-analytics.com/cx/api.js?experiment=bvHBUCnrTyCg12aSlpZxDg"></script>
+<script src="//www.google-analytics.com/cx/api.js?experiment=CBxWqVQ6T_iEA7RFyp5Jlw"></script>
 
 <!-- Load the JQuery library -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 
 <script>
-// Define JavaScript for each page variation of this experiment.
-var pageVariations = [
-  function() {},  // Original: Do nothing. This will render the default HTML.
-  function() {    // Variation 1: change "donate" to "support"
-    document.getElementById('donation').innerHTML = 'Support';
-  }
-];
-
-// Wait for the DOM to load, then execute the view for the chosen variation.
-$(document).ready(function(){
   // Ask Google Analytics which variation to show the user.
-  var chosenVariation = cxApi.chooseVariation('bvHBUCnrTyCg12aSlpZxDg');
-
-  // Execute the chosen view
-  pageVariations[chosenVariation]();
-}
-);
+  var chosenVariation = cxApi.chooseVariation();
+  // Define JavaScript for each page variation of this experiment.
+  var pageVariations = [
+    function() {},  // Original: Do nothing. This will render the default HTML.
+    function() {    // Variation 1: add RSVP text
+      document.getElementById('donation').innerHTML = 'Support';
+    }
+  ];
+  // Wait for the DOM to load, then execute the view for the chosen variation.
+  $(document).ready(function(){
+    // Execute the chosen view
+    pageVariations[chosenVariation]();
+  });
 </script>
 {% endblock %}

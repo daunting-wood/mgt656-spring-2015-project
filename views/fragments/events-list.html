@@ -11,19 +11,19 @@
 </ul>
 
 <!-- Load the Content Experiment JavaScript API client for the experiment -->
-<script src="//www.google-analytics.com/cx/api.js?experiment=5Xy2ZkSxQOuuZxuP2yGimg"></script>
+<script src="//www.google-analytics.com/cx/api.js?experiment=8gbv_Rn3QnqqUgXnsi6-PQ"></script>
 
 <!-- Load the JQuery library -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 
-<script type="text/javascript">
+<script>
   // Ask Google Analytics which variation to show the user.
   var chosenVariation = cxApi.chooseVariation();
   // Define JavaScript for each page variation of this experiment.
   var pageVariations = [
     function() {},  // Original: Do nothing. This will render the default HTML.
     function() {    // Variation 1: add RSVP text
-      $('li.event').prepend( 'RSVP ' );
+      $('li.event').prepend('RSVP ');
     }
   ];
   // Wait for the DOM to load, then execute the view for the chosen variation.
