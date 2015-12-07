@@ -38,6 +38,11 @@ function scrum6 (request, response) {
   response.render('scrum6.html', contextData);
 }
 
+function final (request, response) {
+  var contextData = {};
+  response.render('final-report.html', contextData);
+}
+
 module.exports = {
   'scrum1' : scrum1,
   'scrum2' : scrum2,
@@ -45,6 +50,7 @@ module.exports = {
   'scrum4' : scrum4,
   'scrum5' : scrum5,
   'scrum6' : scrum6,
-  'reports' : reports
+  'reports' : reports,
+  'final' : final
 };
 
