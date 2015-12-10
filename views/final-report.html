@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Sprint 6 Report</title>
+        <title>Final Report</title>
     </head>
     <body>
         <ul>
@@ -11,9 +11,10 @@
             <li>Alex Kragie (alex.kragie@yale.edu)</li>
         </ul>
         <h1>Daunting-Wood</h1>
-        <h2>Project Status Report 6</h2>
-        <h3>December 7, 2015</h3>
+        <h2>Final Report</h2>
+        <h3>December 11, 2015</h3>
         <h4>Project Description: Make a usable clone of Eventbrite to schedule events and manage RSVPs</h4>
+        <h2>Site Status: Everything is working like a champ</h2>
         <p>Links</p>
         <ul>
             <li><a href="https://waffle.io/daunting-wood/mgt656-spring-2015-project">Kanban Board</a></li>
@@ -21,37 +22,73 @@
             <li><a href="/reports">Previous Sprint Reports</a></li>
         </ul>
         <p>Burndown Chart</p>
-        <a><img src="http://i.imgur.com/RZr2Gnf.png" title="source: imgur.com" height = 400></a>
+        <a><img src="http://i.imgur.com/kWJF2SM.png" title="source: imgur.com" height = 400></a>
         <p>Completed User Stories</p>
-        <ol>
-            <li>Change page background [3 points]</li>
-            <li>Set up A/B testing for RSVP in link [13 points]</li>
-            <li>Test font colors [2 points]</li>
-            <li>Change Welcoem messgae [1 point]</li>
-        </ol>
-        <p>Here's a screenshot of our current homepage. You can see we changed the welcome message, background, font types
-        and font colors.</p>
-        <img src="http://i.imgur.com/fjZ4CTl.png" title="source: imgur.com" height=600/>
-
-        <p>This week the team made significant aesthetic progress on the site - completing stories to modify our page font and color. We also made minor cosmetic text changes
-        to remove template text. In addition, were able to complete A/B testing to investigate the impact of an RSVP link. We also added one more story. We split A/B
-        testing into two seperate tasks and added A/B testing for Donation link, worth 5 points. We still have some aesthetic work to complete in the coming weeks, in addition
-        to working on adding a SQL database.
-        </p>
-        
-        <p>User Stories In Progress</p>
         <ol>
             <li>A/B testing for Donation [5 points]</li>
             <li>Modify headers [1 point]</li>
             <li>Add CSS styling to events page [8 points]</li>
             <li>Test new fonts [2 points]</li>
+            <li>Modify footers [1 point]</li>
+            <li>Add CSS styling to about page [8 points]</li>
+            <li>Add CSS styling to homepage [8 points]</li>
+        </ol>
+
+        <p>This week we continued to tweak the aesthetics of the page to put our final touches on our site. We finished all the additional user stories we wrote after completing the original requirements
+        with the exception of adding a SQL database. This was a lofty goal and it proved to be beyond our means. We don't see any issue in not completing this story because it was not vital to the operation
+        of the website. We instead prioritized user facing stories that would increase the usability of the site.</p>
+        
+        <p>In additon to finising the final stories we set up Google Analytics on the page in order to see how our traffic breaks down by across diffent segments and how they flow through the site.</p>
+        
+        <p>Here's a screen shot of our traffic breakdown</p>
+        <img src="http://i.imgur.com/jyntIiu.png" title="source: imgur.com" height=600/>
+        
+        <p>You can see most of the traffic comes from Yale SOM, but we also get significant traffic from medicine and law schools.
+        We get a small dusting of traffic from the Divinity School.</p>
+        
+        <p>Here's a screen shot of our flow of all traffic.</p>
+        <img src="http://i.imgur.com/bRvDkOn.png" title="source: imgur.com" height=600/>
+        
+        <p>From the flow, we can see the majority of users drop off from the homepage (94.5%). Of those that click through, almost everyone goes to 
+        the event page linked from the homepage. Once they get to the event page 98.5% of users drop off before clicking another link. We can take 
+        this data to mean that we need to work on ways to increase conversions rate. Also, only 2 of over 8,600 users clicked to create a new event, 
+        so we need to work on increasing our membership.</p>
+        
+        <p>Additionally, we ran nine days of A/B testing to determine if adding the work "RSVP" to the event title would affect click-through rate and if changing the word "donate" to "support" on the individual
+        event page would increase click-throughs.</p>
+        
+        <p>In order to set up the A/B testing for the RSVP link, we set up an experiment checks traffic that funnels through the home page to the /events/0 page, since the only way to get to the /events/0 page
+        from the home page is to click the event title.</p>
+        
+        <p>Here are screen shots of our two test pages</p>
+        <p>Original</p><img src="http://i.imgur.com/VRyytQu.png" title="source: imgur.com" height=600/>
+        <p>Variation 1</p><img src="http://i.imgur.com/wyHfRJo.png" title="source: imgur.com" height=600/>
+        
+        <p>This is how our analytics tracked</p>
+        <img src="http://i.imgur.com/lozmU99.png" title="source: imgur.com" height=500/>
+        
+        <p>With almost 6,000 experiments, adding "RSVP" to the title increased click-through by 40%, giving this variation a 83% chance of winning the 
+        experiment. We recommend including "RSVP" in the title.</p>
+        
+        <p>In order to set up the A/B testing for the donation link, we set up an experiment checks traffic that funnels through the /events/0 page to the /events page, since the only way to get to the /events page
+        from the /events/0 page is to click donation link.</p>
+        
+        <p>Here are screen shots of our two test pages</p>
+        <p>Original</p><img src="http://i.imgur.com/GK24z0B.png" title="source: imgur.com" height=600/>
+        <p>Variation 1</p><img src="http://i.imgur.com/mR2nuVA.png" title="source: imgur.com" height=600/>
+        
+        <p>This is how our analytics tracked</p>
+        <img src="http://i.imgur.com/Wxyvawp.png" title="source: imgur.com" height=500/>
+        
+        <p>We ran an A/B testing and survey on Google Analytics testing whether using the word “donate” or “support” would garner more conversions from our users. We had 283 experiment sessions (“users”) on 5 of the 8 days of total data where there was traffic.  We found that in general “support” peaked at around 20% whereas “donate” peaked around 10%. Overall the conversion rate for support was also higher on average at 3.28% vs. 2.48%. It is estimated that the variation (i.e. “support” instead of “donate”) will outperform the original by 22%. Therefore, we think that “support” leads to more conversion. We hypothesize the word “support” seems more approachable and less demanding to our users whereas “donate” is rather blunt and could apply to non-charitable causes.</p>
+        
+        <p>User Stories In Progress</p>
+        <ol>
+            <li>Add SQL database [20 points]</li>
         </ol>
         <p>Product Backlog</p>
         <ol>
-            <li>Modify footers [1 point]</li>
-            <li>Add CSS styling to about page [8 points]</li>
-            <li>Add SQL database [20 points]</li>
-            <li>Add CSS styling to homepage [8 points]</li>
+            <li>None, Project Complete</li>
         </ol>
         <p>Note on story estimating: We assigned values to our user stories by averaging the estimated difficulty assigned by each member of the team on the Fibonacci sequence scale. We then rounded to the closest number on the scale. </p>
     </body>
