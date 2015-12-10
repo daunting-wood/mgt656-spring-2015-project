@@ -10,12 +10,23 @@
     background: black;
     color: pink; 
     font-family: apple chancery;
-    font-style: bold;
+    font-style: normal;
   }
   header {
     color: red;
     text-align: center;
     font-size: 22px;
+  }
+  H1 {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+  }
+  Footer {
+    color: white;
+    font-style: normal;
+    text-align: right;
+    font-size: 9px;
   }
 </style>
   </head>
@@ -24,7 +35,7 @@
 	<body class="container">
 
     {% block header %}
-      <header>Hey, I'm in the header</header>
+      <header>Daunting Wood Event Site</header>
     {% endblock %}
 
     {% block mainContent %}
@@ -35,6 +46,7 @@
       <footer>
         <a href="/about">About</a>
         <a href="/">Home</a>
+        <p>Daunting Wood accepts no responsibility for anything.</p>
       </footer>
     {% endblock %}
 

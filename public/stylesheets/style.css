@@ -10,3 +10,11 @@ a {
 .form-errors {
 	color: red;
 }
+
+.about-person{
+  text-align: center;
+}
+.about-person span{
+  display: block;
+}
+
